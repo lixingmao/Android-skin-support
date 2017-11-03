@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ import skin.support.content.res.SkinCompatResources;
 import skin.support.observe.SkinObservable;
 import skin.support.observe.SkinObserver;
 import skin.support.widget.SkinCompatSupportable;
-import skin.support.widget.SkinCompatThemeUtils;
+//import skin.support.widget.SkinCompatThemeUtils;
 
 import static skin.support.widget.SkinCompatHelper.INVALID_ID;
 import static skin.support.widget.SkinCompatHelper.checkResourceId;
@@ -143,15 +144,28 @@ public class SkinActivityLifecycle implements Application.ActivityLifecycleCallb
         return SkinCompatManager.getInstance(context).isSkinAllActivityEnable() || context instanceof SkinCompatSupportable;
     }
 
+    private void updateStatusBarColor(Activity activity) {
+//        if (SkinCompatManager.getInstance(activity).isSkinStatusBarColorEnable()
+//                && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            int statusBarColorResId = SkinCompatThemeUtils.getStatusBarColorResId(activity);
+//            int colorPrimaryDarkResId = SkinCompatThemeUtils.getColorPrimaryDarkResId(activity);
+//            if (checkResourceId(statusBarColorResId) != INVALID_ID) {
+//                activity.getWindow().setStatusBarColor(SkinCompatResources.getInstance().getColor(statusBarColorResId));
+//            } else if (checkResourceId(colorPrimaryDarkResId) != INVALID_ID) {
+//                activity.getWindow().setStatusBarColor(SkinCompatResources.getInstance().getColor(colorPrimaryDarkResId));
+//            }
+//        }
+    }
+
     private void updateWindowBackground(Activity activity) {
         if (SkinCompatManager.getInstance(activity).isSkinWindowBackgroundEnable()) {
-            int windowBackgroundResId = SkinCompatThemeUtils.getWindowBackgroundResId(activity);
-            if (checkResourceId(windowBackgroundResId) != INVALID_ID) {
-                Drawable drawable = SkinCompatResources.getInstance(activity).getDrawable(windowBackgroundResId);
-                if (drawable != null) {
-                    activity.getWindow().setBackgroundDrawable(drawable);
-                }
-            }
+//            int windowBackgroundResId = SkinCompatThemeUtils.getWindowBackgroundResId(activity);
+//            if (checkResourceId(windowBackgroundResId) != INVALID_ID) {
+//                Drawable drawable = SkinCompatResources.getInstance(activity).getDrawable(windowBackgroundResId);
+//                if (drawable != null) {
+//                    activity.getWindow().setBackgroundDrawable(drawable);
+//                }
+//            }
         }
     }
 }

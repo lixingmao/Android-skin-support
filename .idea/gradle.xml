@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/android" />
             <option value="$PROJECT_DIR$/android-support" />
+            <option value="$PROJECT_DIR$/android-support/skin-base" />
             <option value="$PROJECT_DIR$/android-support/skin-support" />
             <option value="$PROJECT_DIR$/android-support/skin-support-cardview" />
             <option value="$PROJECT_DIR$/android-support/skin-support-constraint-layout" />

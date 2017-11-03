@@ -33,7 +33,7 @@ public class SkinCompatDelegate implements LayoutInflaterFactory {
             return null;
         }
         if (view instanceof SkinCompatSupportable) {
-            mSkinHelpers.add(new WeakReference<SkinCompatSupportable>((SkinCompatSupportable) view));
+            mSkinHelpers.add(new WeakReference<>((SkinCompatSupportable) view));
         }
 
         return view;
